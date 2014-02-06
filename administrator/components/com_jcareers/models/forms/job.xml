@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_JCAREERS_FORM_LBL_JOB_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_JCAREERS_FORM_LBL_JOB_CREATED_BY"
+            description="COM_JCAREERS_FORM_DESC_JOB_CREATED_BY"  /> 
+
+       <field name="title" type="text"
+                
+            label="COM_JCAREERS_FORM_LBL_JOB_TITLE"
+            description="COM_JCAREERS_FORM_DESC_JOB_TITLE" 
+                
+                
+                 required="true" 
+            filter="raw"
+            maxlength="255" /> 
+            
+        <field name="code" type="text"
+                
+            label="COM_JCAREERS_FORM_LBL_JOB_CODE"
+            description="COM_JCAREERS_FORM_DESC_JOB_CODE"              
+                
+                 required="true" 
+            filter="raw"
+            maxlength="32" /> 
+
+       <field name="total_positions" type="text" size="40" class="inputbox"
+        
+            label="COM_JCAREERS_FORM_LBL_JOB_TOTAL_POSITIONS"
+            description="COM_JCAREERS_FORM_DESC_JOB_TOTAL_POSITIONS" 
+         default="1" 
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="description" type="editor"
+            
+            label="COM_JCAREERS_FORM_LBL_JOB_DESCRIPTION"
+            description="COM_JCAREERS_FORM_DESC_JOB_DESCRIPTION" 
+            required="true" 
+            
+            class="inputbox"
+            filter="JComponentHelper::filterText" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

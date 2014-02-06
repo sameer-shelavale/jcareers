@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form action="index.php?page=app" method="POST"  enctype="multipart/form-data">
+	<elements>
+		
+		<element type="label" name="LBL_APPLICANT_INFO" value="अर्जदाराची माहिती:">
+			<languages>
+				<language name="english">
+					<value>Information of the applicant:</value>					
+				</language>
+				<language name="marathi">
+					<value>अर्जदाराची माहिती:</value>					
+				</language>
+			</languages>	
+		</element>
+		<element type="text" name="name" value="" mandatory="true" >
+			<languages>
+				<language name="english">
+					<label>Full name</label>
+					<title>Write your full name here.</title>
+					<ifempty>You have not entered your name, it is a mandatory field.</ifempty>					
+				</language>
+			</languages>
+		</element>
+		<element type="text" name="phone" mandatory="true" >
+			<languages>
+				<language name="english">
+					<label>Phone number</label>
+					<title>Enter your Phone number here.</title>
+					<ifempty>You have not filled your Phone Number, its a mandatory field.</ifempty>					
+				</language>
+			</languages>
+		</element>
+		<element type="text" name="email" mandatory="true" >
+			<languages>
+				<language name="english">
+					<label>Email</label>
+					<title>Enter your Email address here.</title>
+					<ifempty>You have not filled your email address, its a mandatory field.</ifempty>					
+				</language>
+			</languages>
+		</element>
+		<element type="textarea" name="cover_letter" mandatory="true" rows="15" cols="60" >
+			<languages>
+				<language name="english">
+					<label>Cover Letter</label>
+					<title>Type a short cover letter.</title>
+					<ifempty>You have not written a cover letter, its a mandatory field.</ifempty>					
+				</language>
+			</languages>
+		</element>
+		<element type="file" name="resume" mandatory="false" uploaddirectory="components/com_jcareers/resumes/" allowExtensions="pdf,doc,docx" maxsize="2">
+			<languages>
+				<language name="english">
+					<label>Resume</label>
+					<title>Select your resume for upload in pdf/doc/docx format.</title>
+					<ifempty>You have not attached your resume, its a mandatory field.</ifempty>					
+				</language>
+			</languages>
+		</element>
+		<element type="submit" name="submit" value="Submit Application" class="button-primary"></element>
+		<element type="hidden" name="job_id" value="0"></element>
+	</elements>
+</form>

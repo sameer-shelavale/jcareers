@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_jcareers</name>
+    <creationDate>2013-07-05</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>sameer shelavale</author>
+    <authorEmail>samiirds@gmail.com</authorEmail>
+    <authorUrl>https://github.com/sameer-shelavale</authorUrl>
+    <version>1.0.0</version>
+    <description>Displays list of job openings and allows users to submit resumes</description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>jcareers.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>classes</folder>
+        <folder>resumes</folder>
+    </files>
+    <languages folder="site">
+        
+			<language tag="en-GB">language/en-GB.com_jcareers.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_jcareers/assets/images/s_com_jcareers.png" >COM_JCAREERS</menu>
+        <submenu>
+            
+			<menu link="option=com_jcareers&amp;view=jobs" view="jobs" img="components/com_jcareers/assets/images/s_jobs.png" alt="Jcareers/Jobs">COM_JCAREERS_TITLE_JOBS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>jcareers.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="en-GB">language/en-GB.com_jcareers.ini</language>
+			<language tag="en-GB">language/en-GB.com_jcareers.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+

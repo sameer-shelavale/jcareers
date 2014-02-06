@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+         <field name="id" type="text" default="0" label="COM_JCAREERS_FORM_LBL_JOB_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_JCAREERS_FORM_LBL_JOB_CREATED_BY"
+            description="COM_JCAREERS_FORM_DESC_JOB_CREATED_BY"  />
+       
+       <field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+        	<option value="1">JPUBLISHED</option>
+        	<option value="0">JUNPUBLISHED</option>
+    	</field> 
+
+       <field name="checked_out" type="hidden" filter="unset" />
+       <field name="checked_out_time" type="hidden" filter="unset" />
+        
+
+       <field name="name" type="text"
+            label="COM_JCAREERS_APP_FORM_LBL_NAME"
+            description="COM_JCAREERS_APP_FORM_DESC_NAME" 
+            required="true" 
+            filter="raw"
+            maxlength="255" /> 
+            
+        <field name="phone" type="text"
+            label="COM_JCAREERS_APP_FORM_LBL_PHONE"
+            description="COM_JCAREERS_APP_FORM_DESC_PHONE"              
+            required="true" 
+            filter="raw"
+            maxlength="16" /> 
+            
+       	<field name="email" type="text"
+            label="COM_JCAREERS_APP_FORM_LBL_EMAIL"
+            description="COM_JCAREERS_APP_FORM_DESC_EMAIL"              
+            required="true" 
+            filter="email"
+            maxlength="16" />
+
+       <field name="cover_letter" type="textarea" size="40"
+        
+            label="COM_JCAREERS_APP_FORM_LBL_COVER_LETTER"
+            description="COM_JCAREERS_APP_FORM_DESC_COVER_LETTER" 
+        	cols="100"
+            rows="15"
+         	required="true" 
+        	filter="raw" /> 
+
+       <field name="description" type="textarea"
+                
+            label="COM_JCAREERS_FORM_LBL_JOB_DESCRIPTION"
+            description="COM_JCAREERS_FORM_DESC_JOB_DESCRIPTION" 
+            required="true" 
+            cols="100"
+            rows="15"
+            filter="raw" /> 
+
+	
+	</fieldset>
+
+</form>
